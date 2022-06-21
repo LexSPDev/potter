@@ -6,7 +6,9 @@ export const Home = () => {
     <div className="mainWrapper">
         <Header></Header>
         <Select></Select>
-        <Card></Card>
+        <div className="cardWrapper">
+          <Card></Card>
+        </div>
     </div>
   )
 }
