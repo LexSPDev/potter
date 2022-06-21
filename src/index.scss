@@ -21,7 +21,7 @@ code {
     color: white;
   }
   background-color: black;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
 }
 .centerWrapper{
@@ -94,7 +94,7 @@ background: linear-gradient(90deg, rgba(40,153,186,1) 0%, rgba(98,207,253,1) 100
 }
 .cardWrapper{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, 270px);
   width: 100%;
 }
 .aliveWrapper{
