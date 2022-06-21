@@ -1,5 +1,10 @@
 export const Add = () => {
   return (
-    <div>add</div>
+    <button className="centerWrapperRow"> 
+      <span>
+        AGREGAR
+      </span>
+      <i className="ph-user-plus-fill white" ></i>
+    </button>
   )
 }
