@@ -29,6 +29,73 @@ code {
   flex-direction: column;
   align-items: center;
 }
+.buttonWrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  width: 40%;
+  margin: 0 20px;
+  height:  60px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+.btnNormal{
+  background-color: RGB(92, 93, 92);
+  &:hover{
+    background-color: RGB(156, 151, 201)
+  }
+}
+.btnActive{
+  background-color: RGB(107, 99, 181);
+}
+.cardProfile{
+  display: flex;
+  border-radius: 20px;
+  width: 45%;
+  height: 200px;
+  background-color: white;
+}
+.cardPhoto{
+  width: 40%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: red;
+  border-radius: 20px 0 0 20px;
+  & img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    object-fit: fill;
+  }
+}
+.cardData{
+  width: 60%;
+  padding: 10px;
+  color: black;
+  font-size: 10px;
+  & h3 {
+    color: gray;
+    margin: 5px 0 0 0;
+  }
+  & h2 {
+    margin:22px 0;
+    font-size: 20px;
+  }
+  & h4 {
+    color: gray;
+    margin:8px 0;
+    & span {
+     font-weight: 600;
+     color: RGB(55, 74, 89);
+    }
+  }
+}
 @media (min-width: 600px) {
   .mainWrapper {
     background-image: url('./assets/img/hogwarts.jpeg');

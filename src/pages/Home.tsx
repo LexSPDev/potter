@@ -1,3 +1,4 @@
+import { Card } from "../components/card/card"
 import { Header } from "../components/header/header"
 import { Select } from "../components/select/select"
 export const Home = () => {
@@ -5,7 +6,7 @@ export const Home = () => {
     <div className="mainWrapper">
         <Header></Header>
         <Select></Select>
-        
+        <Card></Card>
     </div>
   )
 }
