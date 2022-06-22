@@ -1,63 +1,42 @@
-export const Card = () => {
+export const Card = ({data}) => {
   return (
-  <>
-    <div className="cardProfile alive">
-      <div className="cardPhoto gryffindor">
-        <img src="http://hp-api.herokuapp.com/images/filch.jpg" alt="nombre" />
-      </div>
-      <div className="cardData">
-        <h2>Harry Potter</h2>
-        <div className="aliveWrapper">
-          <span className="aliveData">VIVO / ESTUDIANTE </span>
-          <i className="ph-bookmark-simple"></i>
+  <> {
+    data !== null ? (
+      data.map((el:any) => (
+        <div className="cardProfile alive" key={el.name}>
+        <div className={`cardPhoto ${el.house}`}>
+          <img src={el.image} alt="nombre" />
         </div>
-        <h2>Harry Potter</h2>
-        <h4>
-          <span>Cumpleaños: </span>
-          30-07-1980
-        </h4>
-        <h4>
-          <span>Género: </span>
-          Male
-        </h4>
-        <h4>
-          <span>Color de ojos: </span>
-          Green
-        </h4>
-        <h4>
-          <span>Color de pelo: </span>
-          black
-        </h4>
-      </div>
-    </div>    <div className="cardProfile alive">
-      <div className="cardPhoto gryffindor">
-        <img src="http://hp-api.herokuapp.com/images/filch.jpg" alt="nombre" />
-      </div>
-      <div className="cardData">
-        <h2>Harry Potter</h2>
-        <div className="aliveWrapper">
-          <span className="aliveData">VIVO / ESTUDIANTE </span>
-          <i className="ph-bookmark-simple"></i>
+        <div className="cardData">
+          <h2>{el.name}</h2>
+          <div className="aliveWrapper">
+            <span className="aliveData">{el.alive ? "VIVO": "FINADO"} / {el.hogwarstStaff === false ? "ESTUDIANTE" : "STAFF"} </span>
+            <i className="ph-bookmark-simple"></i>
+          </div>
+          <h2>{el.name}</h2>
+          <h4>
+            <span>Cumpleaños: </span>
+            {el.dateOfBirth}
+          </h4>
+          <h4>
+            <span>Género: </span>
+            {el.gender}
+          </h4>
+          <h4>
+            <span>Color de ojos: </span>
+            {el.eyeColour}
+          </h4>
+          <h4>
+            <span>Color de pelo: </span>
+            {el.hairColour}
+          </h4>
         </div>
-        <h2>Harry Potter</h2>
-        <h4>
-          <span>Cumpleaños: </span>
-          30-07-1980
-        </h4>
-        <h4>
-          <span>Género: </span>
-          Male
-        </h4>
-        <h4>
-          <span>Color de ojos: </span>
-          Green
-        </h4>
-        <h4>
-          <span>Color de pelo: </span>
-          black
-        </h4>
       </div>
-    </div>
+      ))
+    ): <h4>No hay datos</h4>
+  
+  }
+
   </>
   )
 }

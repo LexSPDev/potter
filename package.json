@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fake-api": "json-server --watch src/api/hp-characters.json --port 5000"
   },
   "dependencies": {
     "json-server": "^0.17.0",
