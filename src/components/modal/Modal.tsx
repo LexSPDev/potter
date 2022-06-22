@@ -72,7 +72,7 @@ export const Modal = ({isOpen, closeModal,data,url,setDb}) => {
   return (
     <article className={`modal ${isOpen && "isOpen"}`}>
         <div className='modalWrapper'>
-            <div>
+            <div className="tituloPersonaje">
                 <h2>Agrega un personaje</h2>
                 <button className='modalClose' onClick={closeModal}>X</button>
             </div>
@@ -141,7 +141,10 @@ export const Modal = ({isOpen, closeModal,data,url,setDb}) => {
                 <label htmlFor="foto">Fotografia</label>
                 <input type="file" name="foto" />
             </div>
-            <button type="submit">Guardar</button>
+            <div className="btnWrapper">
+
+            <button type="submit" className="buttonSave">Guardar</button>
+            </div>
         </form>     
         </div>
 
