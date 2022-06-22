@@ -8,16 +8,12 @@ import { getCharacters } from "../helpers/getCharacters"
 
 export const Home = () => {
   const [db, setDb]= useState(null)
-  const [dataToEdit, setDataToEdit] = useState(null)
   let api = getCharacters();
   let url = "http://localhost:5000/characters"
   useEffect(()=> {
     api.get(url).then((res) =>{
-      console.log(res)
       if(!res.err){
         setDb(res)
-      } else {
-        setDb(null)
       }
     })
   }, [])
@@ -25,11 +21,11 @@ export const Home = () => {
     <div className="mainWrapper">
         <div className="favWrapper">
           <Favorites></Favorites>
-          <Add></Add>
+          <Add data={db} url={url} setDb={setDb}></Add>
         </div>
 
         <Header></Header>
-        <Select></Select>
+        <Select setDb={setDb} db={db}></Select>
         <div className="cardWrapper">
           <Card data={db}></Card>
         </div>

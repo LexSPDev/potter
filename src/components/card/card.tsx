@@ -10,7 +10,7 @@ export const Card = ({data}) => {
         <div className="cardData">
           <h2>{el.name}</h2>
           <div className="aliveWrapper">
-            <span className="aliveData">{el.alive ? "VIVO": "FINADO"} / {el.hogwarstStaff === false ? "ESTUDIANTE" : "STAFF"} </span>
+            <span className="aliveData">{el.alive ? "VIVO": "FINADO"} / {el.hogwartsStaff === false ? "ESTUDIANTE" : "STAFF"}</span>
             <i className="ph-bookmark-simple"></i>
           </div>
           <h2>{el.name}</h2>

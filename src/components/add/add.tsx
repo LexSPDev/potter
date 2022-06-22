@@ -1,8 +1,9 @@
 import { useModal } from "../../hooks/useModal";
 import { Modal } from "../modal/Modal"
 
-export const Add = () => {
+export const Add = ({data, url, setDb}) => {
   const[isOpenModal, openModal, closeModal] = useModal(false);
+
   return (
     <>
     <button className="centerWrapperRow" onClick={openModal}> 
@@ -12,7 +13,7 @@ export const Add = () => {
       <i className="ph-user-plus-fill white" ></i>
     </button>
 
-    <Modal isOpen={isOpenModal} closeModal={closeModal}></Modal>
+    <Modal isOpen={isOpenModal} closeModal={closeModal} data={data} url={url} setDb={setDb}></Modal>
     </>
   )
 }
