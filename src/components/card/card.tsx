@@ -1,6 +1,17 @@
+import { useDispatch, useSelector } from "react-redux"
+import { addToFav } from "../../store/fav/favSlice";
+
 export const Card = ({data}) => {
+  const dispatch = useDispatch();
+  const favs = useSelector((state) => state.fav)
+  const handleAddToFav = (char) =>{
+    dispatch(addToFav(char))
+  }
+  const movil = screen.width < 600 ? true : false
+  console.log(movil)
   return (
   <> {
+    
     data !== null ? (
       data.map((el:any) => (
         <div className="cardProfile alive" key={el.name}>
@@ -8,28 +19,17 @@ export const Card = ({data}) => {
           <img src={el.image} alt="nombre" />
         </div>
         <div className="cardData">
-          <h2>{el.name}</h2>
+          {movil && <span className="nombre">{el.name}</span>}
           <div className="aliveWrapper">
             <span className="aliveData">{el.alive ? "VIVO": "FINADO"} / {el.hogwartsStaff === false ? "ESTUDIANTE" : "STAFF"}</span>
-            <i className="ph-bookmark-simple"></i>
+            
+            {<i className="ph-bookmark-simple" onClick={()=> handleAddToFav(el)}></i>}
           </div>
-          <h2>{el.name}</h2>
-          <h4>
-            <span>Cumpleaños: </span>
-            {el.dateOfBirth}
-          </h4>
-          <h4>
-            <span>Género: </span>
-            {el.gender}
-          </h4>
-          <h4>
-            <span>Color de ojos: </span>
-            {el.eyeColour}
-          </h4>
-          <h4>
-            <span>Color de pelo: </span>
-            {el.hairColour}
-          </h4>
+          {!movil && ( <span className="nombre">{el.name}</span> )}
+          {!movil && ( <h4><span>Cumpleaños: </span>{el.dateOfBirth}</h4> )}
+          {!movil && ( <h4><span>Género: </span>{el.gender}</h4> )}
+          {!movil && ( <h4><span>Color de ojos: </span>{el.eyeColour}</h4> )}
+          {!movil && ( <h4><span>Color de pelo: </span>{el.hairColour}</h4> )}
         </div>
       </div>
       ))

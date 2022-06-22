@@ -35,8 +35,8 @@ export const Select = ({setDb, db}) => {
     <>
     <h2>Selecciona tu filtro</h2>
     <div className="buttonWrapper">
-      <button className="btn btnNormal" onClick={() => handleClick('estudiantes')}>ESTUDIANTES</button>
-      <button className="btn btnNormal btnActive" onClick={() => setRole('staff')}>STAFF</button>
+      <button className={role === 'estudiantes' ? "btn btnNormal btnActive" : "btn btnNormal"} onClick={() => handleClick('estudiantes')}>ESTUDIANTES</button>
+      <button className={role === 'estaff' ? "btn btnNormal btnActive" : "btn btnNormal"} onClick={() => handleClick('staff')}>STAFF</button>
     </div>
     </>
   )
