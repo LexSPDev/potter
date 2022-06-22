@@ -13,7 +13,7 @@ export const Card = ({data}) => {
     
     data !== null ? (
       data.map((el:any) => (
-        <div className="cardProfile alive" key={el.name}>
+        <div className={el.alive ? "cardProfile alive" : "cardProfile dead"} key={el.name}>
         <div className={`cardPhoto ${el.house}`}>
           <img src={el.image} alt="nombre" />
         </div>
