@@ -8,7 +8,6 @@ export const Card = ({data}) => {
     dispatch(addToFav(char))
   }
   const movil = screen.width < 600 ? true : false
-  console.log(movil)
   return (
   <> {
     
