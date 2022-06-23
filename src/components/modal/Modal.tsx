@@ -26,7 +26,6 @@ const initailForm =    {
     };
 
 export const Modal = ({isOpen, closeModal,data,url,setDb}:{isOpen: boolean, closeModal:Function ,data:object,url:string,setDb:Function}) => {
-    console.log(typeof(closeModal), typeof(isOpen))
     const [form, setForm] = useState(initailForm);
     let api = getCharacters();
 

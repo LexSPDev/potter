@@ -2,7 +2,6 @@ import { useModal } from "../../hooks/useModal";
 import { Modal } from "../modal/Modal"
 
 export const Add = ({data, url, setDb}:{data:Array<Object>, url:string, setDb:Function}) => {
-  console.log(typeof(setDb))
   const[isOpenModal, openModal, closeModal] = useModal(false);
   const handleClick = () => {
     openModal()
