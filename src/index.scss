@@ -12,9 +12,9 @@ code {
     monospace;
 }
 .favWrapper{
-  position: sticky;
+  position: fixed;
   display: flex;
-  top: 100%;
+  bottom: 0;
   border: none;
   height: 30px;
   & button{
@@ -25,22 +25,16 @@ code {
     border: none;
     outline:none;
   }
-  & button:first-child{
-    border-radius: 10px 0 0 0;
-  }
-  & button:nth-child(2n){
-    border-left: 1px solid black;
-    border-radius: 0 10px 0 0 ;
-  }
 }
 .favoriteList{
   position: absolute;
-  // display: flex;
   display: none;
+  align-items: center;
   flex-direction: column;
   align-items: center;
   background-color: #6b63b5;
   width: 100%;
+  
   bottom: 30px;
   border-radius: 10px 10px 0 0;
   & img{
@@ -190,9 +184,15 @@ i{
 button{
   cursor: pointer;
 }
+.btnSecond{
+  border-radius: 0 10px 0 0;
+  border-left: 1px solid black !important;
+}
+.btnPrimer{
+  border-radius: 10px 0 0 0;
+}
 .modal{
   position: fixed;
-  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -275,9 +275,6 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  & button{
-    border-radius: 5px !important;
-  }
 }
 @media (min-width: 600px) {
   .mainWrapper {
@@ -339,21 +336,6 @@ button{
     position: absolute;
     top: 0;
     right: 10%;
-    & button{
-      background-color: #6b63b5;
-      color: white;
-      width: 110px;
-      font-size: 12px;
-      border-bottom: 1px solid black;
-    }
-    & button:first-child{
-      border-radius: 0 0 0 10px;
-
-    }
-    & button:nth-child(2n){
-      border-radius: 0 0 10px 0;
-      border-left: 1px solid black;
-    }
   }
   .centerWrapperRow{
     justify-content: space-around;
@@ -361,24 +343,13 @@ button{
   .btn{
     width: 20%;
   }
-  .favoriteList{
+  .favoriteList {
     bottom: 0;
     top: 30px;
+    width: 360px;
+    height: 230px;
     border-radius: 0 0 10px 10px;
-    z-index: 1000;
-    & img{
-      border-radius: 20px;
-      width: 20px;
-      height: 20px;
-    }
-    & .favoriteItem{
-      margin: 10px 0;
-      display: flex;
-      width: 90%;
-      justify-content: space-around;
-      height: 25px;
-    }
-  }
+}
   .modalWrapper {
     display: grid;
     place-content: center;
@@ -386,6 +357,13 @@ button{
     max-width: 700px;
     min-height: 400px;
     max-height: 600px;
+  }
+  .btnSecond{
+    border-radius: 0 0 10px 0;
+    border-left: 1px solid black !important;
+  }
+  .btnPrimer{
+    border-radius: 0 0 0 10px;
   }
   .formWrapper{
     column-gap: 40px;
@@ -417,6 +395,7 @@ button{
       justify-content: center;
       align-items: center;
     }
-  
-}
+    
+  }
+
 }

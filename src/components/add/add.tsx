@@ -8,7 +8,7 @@ export const Add = ({data, url, setDb}:{data:Array<Object>, url:string, setDb:Fu
   }
   return (
     <>
-    <button className="centerWrapperRow" onClick={handleClick}> 
+    <button className="centerWrapperRow btnSecond" onClick={handleClick}> 
       <span>
         AGREGAR
       </span>

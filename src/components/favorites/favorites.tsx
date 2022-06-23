@@ -8,7 +8,7 @@ export const Favorites = () => {
   }
   return (
     <>
-      <button className="centerWrapperRow" onClick={handleClick}>
+      <button className="centerWrapperRow btnPrimer" onClick={handleClick}>
         <span>
           FAVORITOS
         </span>
