@@ -6,10 +6,7 @@ export const CardFavorite = ({el}:{el:any}) => {
   const dispatch = useDispatch();
   const favs = useSelector((state:any) => state.fav)
   const favsData = favs.favoritesItems
-  const favName = favsData.map((el: any) => {
-    return el.name
-  })
-
+  const favName = favsData.map((el: any) => {return el.name})
   const handleAddToFav = (char:any) =>{
     if(favsData.length === 0){
       dispatch(addToFav(char))
