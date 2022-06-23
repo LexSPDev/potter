@@ -549,54 +549,6 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
-    },
-    {
-      "name": "asdasdasd",
-      "species": "",
-      "gender": "Mujer",
-      "house": "",
-      "dateOfBirth": "1010-10-10",
-      "yearOfBirth": 0,
-      "ancestry": "",
-      "eyeColour": "asdasd",
-      "hairColour": "asdasd",
-      "wand": {
-        "wood": "",
-        "core": "",
-        "length": 0
-      },
-      "patronus": "",
-      "hogwartsStudent": false,
-      "hogwartsStaff": true,
-      "actor": " ",
-      "alive": true,
-      "image": "",
-      "role": "Staff",
-      "id": 1655941006358
-    },
-    {
-      "name": "alex",
-      "species": "",
-      "gender": "Hombre",
-      "house": "",
-      "dateOfBirth": "1010-10-10",
-      "yearOfBirth": 0,
-      "ancestry": "",
-      "eyeColour": "azul",
-      "hairColour": "verde",
-      "wand": {
-        "wood": "",
-        "core": "",
-        "length": 0
-      },
-      "patronus": "",
-      "hogwartsStudent": true,
-      "hogwartsStaff": false,
-      "actor": " ",
-      "alive": true,
-      "image": "",
-      "role": "Estudiante",
-      "id": 1655941180161
     }
   ]
 }

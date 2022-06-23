@@ -21,7 +21,7 @@ const initailForm =    {
         "hogwartsStaff": true,
         "actor": " ",
         "alive": true,
-        "image": "",
+        "image": "https://img2.freepng.es/20180530/ywv/kisspng-user-profile-computer-icons-profile-avatar-5b0ee85f16b9c2.8136541415277036470931.jpg",
         "role": ""
     };
 
