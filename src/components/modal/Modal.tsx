@@ -25,7 +25,8 @@ const initailForm =    {
         "role": ""
     };
 
-export const Modal = ({isOpen, closeModal,data,url,setDb}) => {
+export const Modal = ({isOpen, closeModal,data,url,setDb}:{isOpen: boolean, closeModal:Function ,data:object,url:string,setDb:Function}) => {
+    console.log(typeof(closeModal), typeof(isOpen))
     const [form, setForm] = useState(initailForm);
     let api = getCharacters();
 
@@ -37,19 +38,19 @@ export const Modal = ({isOpen, closeModal,data,url,setDb}) => {
         }
         api.post(url,options).then((res)=> {
         if(!res.err){
-            setDb([...data, res ])
+            setDb([...[data], res ])
         } else {
             console.log(res)
         }
         })
       }
-      const handleChange = (e:React.ChangeEvent<HTMLSelectElement>) => {
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({
           ...form,
           [e.target.name]: e.target.value,
         });
       };
-      const handleSubmit = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(form)
         if(form.role === 'Estudiante'){
@@ -68,13 +69,15 @@ export const Modal = ({isOpen, closeModal,data,url,setDb}) => {
         setForm(initailForm);
         closeModal();
     };
-
+    const handleClick = () => {
+        closeModal()
+    }
   return (
     <article className={`modal ${isOpen && "isOpen"}`}>
         <div className='modalWrapper'>
             <div className="tituloPersonaje">
                 <h2>Agrega un personaje</h2>
-                <button className='modalClose' onClick={closeModal}>X</button>
+                <button className='modalClose' onClick={handleClick}>X</button>
             </div>
         <form onSubmit={handleSubmit}>
             <div className="formWrapper">

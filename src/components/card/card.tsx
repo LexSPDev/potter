@@ -1,10 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
 import { addToFav } from "../../store/fav/favSlice";
 
-export const Card = ({data}) => {
+export const Card = ({data}:{data:Array<Object>}) => {
   const dispatch = useDispatch();
-  const favs = useSelector((state) => state.fav)
-  const handleAddToFav = (char) =>{
+  const handleAddToFav = (char:object) =>{
     dispatch(addToFav(char))
   }
   const movil = screen.width < 600 ? true : false

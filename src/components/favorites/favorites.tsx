@@ -5,7 +5,7 @@ export const Favorites = () => {
   const [isOpenFav, openFav, closeFav] = useFav(false)
   return (
     <>
-      <button className="centerWrapperRow" onClick={openFav}>
+      <button className="centerWrapperRow" onClick={()=>openFav}>
         <span>
           FAVORITOS
         </span>

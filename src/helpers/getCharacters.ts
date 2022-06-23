@@ -1,6 +1,6 @@
 
 export const getCharacters = ( ) => {
-    const customFetch = (endpoint, options) => {
+    const customFetch = (endpoint:string, options:any) => {
         const defaultHeader = {
           accept: "application/json",
         };

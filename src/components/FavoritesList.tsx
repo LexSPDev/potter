@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { delToFav } from '../store/fav/favSlice';
 import { useSelector } from 'react-redux';
-export const FavoritesList = ({isOpen, closeFav}) => {
-  const favs = useSelector((state) => state.fav)
+export const FavoritesList = ({isOpen}:{isOpen:boolean}) => {
+  const favs = useSelector((state:any) => state.fav)
   const dispatch = useDispatch();
-  const handleDelToFav = (char) =>{
+  const handleDelToFav = (char: object) =>{
     console.log(char)
     dispatch(delToFav(char))
   }

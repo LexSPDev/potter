@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { getCharacters } from "../../helpers/getCharacters";
 
-export const Select = ({setDb, db}) => {
+export const Select = ({setDb}:{setDb:Function}) => {
   const [role,setRole]=useState('');
-  const [dbShadow, setDbShadow]= useState(null)
+  const [dbShadow, setDbShadow]= useState([] as object[])
   function isStaff(elemento: any) {
     return elemento.hogwartsStaff === true;
   }
@@ -23,13 +23,15 @@ export const Select = ({setDb, db}) => {
     })
   }, [])
   useEffect(()=> {
-    let result = []
-    if(role === 'staff'){
-      result = dbShadow.filter(isStaff)
-    } else if(role === 'estudiantes'){
-      result = dbShadow.filter(isStudent)
+    let result : object[] = []
+    if(dbShadow !== null){
+      if(role === 'staff'){
+        result = dbShadow.filter(isStaff)
+      } else if(role === 'estudiantes'){
+        result = dbShadow.filter(isStudent)
+      }
+      setDb(result)
     }
-    setDb(result)
   }, [role])
   return (
     <>
