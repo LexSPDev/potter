@@ -14,7 +14,7 @@ export const Card = ({data}:{data:Array<Object>}) => {
           <img src={el.image} alt="nombre" />
         </div>
         <div className="cardData">
-          {movil && <span className="nombre">{el.name}</span>}
+          {movil && <div className="nombreMovil" > <span className="nombre">{el.name}</span></div> }
           <div className="aliveWrapper">
             <span className="aliveData">{el.alive ? "VIVO": "FINADO"} / {el.hogwartsStaff === false ? "ESTUDIANTE" : "STAFF"}</span>
 

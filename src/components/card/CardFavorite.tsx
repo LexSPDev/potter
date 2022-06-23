@@ -15,9 +15,6 @@ export const CardFavorite = ({el}:{el:any}) => {
     }
   }
   const isFavoriteValidation = () =>{
-    console.log(el.name)
-    console.log(favName.includes(el.name))
-    console.log(favsData)
     return favName.includes(el.name)
   }
   const isFavorite : boolean =isFavoriteValidation();

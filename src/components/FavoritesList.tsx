@@ -6,7 +6,6 @@ export const FavoritesList = ({isOpen}:{isOpen:boolean}) => {
   const favs = useSelector((state:any) => state.fav)
   const favsData = favs.favoritesItems
   const favsLenght = favs.favoritesItems.length
-  let favsDisplay = [] as Array<any> 
   const dispatch = useDispatch();
   const handleDelToFav = (char: object) =>{
     dispatch(delToFav(char))
