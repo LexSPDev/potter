@@ -1,10 +1,20 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { addToFav } from "../../store/fav/favSlice";
 
 export const Card = ({data}:{data:Array<Object>}) => {
   const dispatch = useDispatch();
-  const handleAddToFav = (char:object) =>{
-    dispatch(addToFav(char))
+  let favorites= [''];
+  const handleAddToFav = (char:any) =>{
+    if(favorites.length === 0){
+      dispatch(addToFav(char))
+      favorites.push(char.name)
+    } else if(!favorites.includes(char.name)){
+      dispatch(addToFav(char))
+      favorites.push(char.name)
+    }
+  }
+  const favorite = (name: string) => {
+    return favorites.includes(name)
   }
   const movil = screen.width < 600 ? true : false
   return (
@@ -20,8 +30,11 @@ export const Card = ({data}:{data:Array<Object>}) => {
           {movil && <span className="nombre">{el.name}</span>}
           <div className="aliveWrapper">
             <span className="aliveData">{el.alive ? "VIVO": "FINADO"} / {el.hogwartsStaff === false ? "ESTUDIANTE" : "STAFF"}</span>
-            
-            {<i className="ph-bookmark-simple" onClick={()=> handleAddToFav(el)}></i>}
+            { !favorite(el.name) ? (
+              <i className="ph-bookmark-simple" onClick={()=> handleAddToFav(el)}></i>
+              ) : (
+                <i className="ph-bookmark-simple-fill white"></i>
+            )}
           </div>
           {!movil && ( <span className="nombre">{el.name}</span> )}
           {!movil && ( <h4><span>Cumpleaños: </span>{el.dateOfBirth}</h4> )}
