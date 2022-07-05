@@ -549,6 +549,78 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
+    },
+    {
+      "name": "freyja",
+      "species": "",
+      "gender": "Mujer",
+      "house": "",
+      "dateOfBirth": "2021-02-19",
+      "yearOfBirth": 0,
+      "ancestry": "",
+      "eyeColour": "azul",
+      "hairColour": "blanco",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": 0
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": " ",
+      "alive": true,
+      "image": "https://img2.freepng.es/20180530/ywv/kisspng-user-profile-computer-icons-profile-avatar-5b0ee85f16b9c2.8136541415277036470931.jpg",
+      "role": "Estudiante",
+      "id": 1656021304663
+    },
+    {
+      "name": "alex",
+      "species": "",
+      "gender": "Mujer",
+      "house": "",
+      "dateOfBirth": "1010-10-10",
+      "yearOfBirth": 0,
+      "ancestry": "",
+      "eyeColour": "alex",
+      "hairColour": "alex",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": 0
+      },
+      "patronus": "",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "actor": " ",
+      "alive": true,
+      "image": "https://img2.freepng.es/20180530/ywv/kisspng-user-profile-computer-icons-profile-avatar-5b0ee85f16b9c2.8136541415277036470931.jpg",
+      "role": "Staff",
+      "id": 1656024162786
+    },
+    {
+      "name": "mosn",
+      "species": "",
+      "gender": "Mujer",
+      "house": "",
+      "dateOfBirth": "1010-10-10",
+      "yearOfBirth": 0,
+      "ancestry": "",
+      "eyeColour": "mans",
+      "hairColour": "mons",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": 0
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": " ",
+      "alive": true,
+      "image": "https://img2.freepng.es/20180530/ywv/kisspng-user-profile-computer-icons-profile-avatar-5b0ee85f16b9c2.8136541415277036470931.jpg",
+      "role": "Estudiante",
+      "id": 1656024210509
     }
   ]
 }

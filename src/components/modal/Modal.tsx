@@ -37,7 +37,7 @@ export const Modal = ({isOpen, closeModal,data,url,setDb}:{isOpen: boolean, clos
         }
         api.post(url,options).then((res)=> {
         if(!res.err){
-            setDb([...[data], res ])
+            setDb([...data, res ])
         } else {
             console.log(res)
         }

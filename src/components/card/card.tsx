@@ -1,5 +1,3 @@
-import { useDispatch } from "react-redux"
-import { addToFav } from "../../store/fav/favSlice";
 import { CardFavorite } from "./cardFavorite";
 
 export const Card = ({data}:{data:Array<Object>}) => {
