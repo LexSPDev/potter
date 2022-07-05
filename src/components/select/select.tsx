@@ -23,7 +23,6 @@ export const Select = ({setDb}:{setDb:Function}) => {
   const handleClick = (e: string) => {
     if(e === 'posicion'){ setStatus('')}
     if(e === 'status'){ setRole('')}
-    console.log(e)
     setSearch(e)
   }
   const handleClickPosition = (e:string) => {
@@ -40,7 +39,6 @@ export const Select = ({setDb}:{setDb:Function}) => {
     })
   }, [])
   useEffect(()=> {
-    console.log('hola')
     if(dbShadow !== null){
       setDb(dbShadow)
     }
